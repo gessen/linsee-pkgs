@@ -1,0 +1,92 @@
+@startuml
+
+package "preparations" {
+  [dotfiles]
+  [symlinks]
+}
+
+package "zsh-plugins" {
+  [zsh-autopair]
+  [zsh-autosuggestions]
+  [zsh-fzf-git]
+  [zsh-fzf-kill]
+  [zsh-interactive-cd]
+  [zsh-syntax-highlighting]
+}
+
+package "zsh-themes" {
+  [zsh-powerlevel10k]
+}
+
+[stow] ..> [bash-completion]
+[stow] ..> [diff-so-fancy]
+[stow] ..> [fasd]
+[stow] ..> [fzf]
+[stow] ..> [gcc]
+[stow] ..> [oh-my-zsh]
+[stow] ..> [patchelf]
+[stow] ..> [pyenv]
+
+[patchelf] ..> [gcc]
+[patchelf] ..> [cmake]
+
+[gcc] ..> [aspell]
+[gcc] ..> [binutils]
+[gcc] ..> [bison]
+[gcc] ..> [curl]
+[gcc] ..> [emacs]
+[gcc] ..> [gmp]
+[gcc] ..> [libevent]
+[gcc] ..> [libtasn1]
+[gcc] ..> [ncurses]
+[gcc] ..> [python2]
+[gcc] ..> [python3]
+[gcc] ..> [rustup]
+[gcc] ..> [sqlite]
+[gcc] ..> [tar]
+
+[cmake] ..> [ccls]
+[cmake] ..> [llvm-project]
+
+[pyenv] ..> [pythons]
+[sqlite] ..> [pythons]
+
+[python3] ..> [bear]
+[python3] ..> [git-review]
+[python3] ..> [ranger]
+
+[gmp] ..> [nettle]
+[gmp] ..> [gnutls]
+
+[libtasn1] ..> [gnutls]
+[nettle] ..> [gnutls]
+
+[gnutls] ..> [emacs]
+[jansson] ..> [emacs]
+
+[aspell] ..> [aspell-en]
+
+[binutils] ..> [llvm-project]
+
+[tar] ..> [libtool]
+
+[ncurses] ..> [htop]
+[ncurses] ..> [llvm-project]
+[ncurses] ..> [tig]
+[ncurses] ..> [tmux]
+[ncurses] ..> [zsh]
+
+[libevent] ..> [tmux]
+
+[curl] ..> [git]
+
+[git] ..> [git-lfs]
+
+[llvm-project] ..> [ccls]
+
+[rustup] ..> [bat]
+[rustup] ..> [fd-find]
+[rustup] ..> [lsd]
+[rustup] ..> [ripgrep]
+
+@enduml
