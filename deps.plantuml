@@ -90,5 +90,6 @@ package "zsh-themes" {
 [rustup] ..> [fd-find]
 [rustup] ..> [lsd]
 [rustup] ..> [ripgrep]
+[rustup] ..> [sad]
 
 @enduml
