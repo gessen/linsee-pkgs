@@ -71,6 +71,7 @@ package "zsh-themes" {
 [tar] ..> [libtool]
 
 [ncurses] ..> [htop]
+[ncurses] ..> [less]
 [ncurses] ..> [llvm-project]
 [ncurses] ..> [tig]
 [ncurses] ..> [tmux]
