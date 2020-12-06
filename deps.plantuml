@@ -86,6 +86,7 @@ package "zsh-themes" {
 [llvm-project] ..> [ccls]
 
 [rustup] ..> [bat]
+[rustup] ..> [delta]
 [rustup] ..> [fd-find]
 [rustup] ..> [lsd]
 [rustup] ..> [ripgrep]
