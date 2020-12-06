@@ -18,22 +18,26 @@ do_strip=${do_strip:-1}
 do_stow=${do_stow:-1}
 
 do_download() {
-  if [[ "${proto}" = "git" ]]; then
-    if [[ ! -d "${srcdir}" ]]; then
-      git clone --recursive --depth=1 "${source##${proto}+}" "${srcdir}"
-    else
-      cd "${srcdir}"
-      git fetch
-    fi
-  elif [[ "${proto}" = "https" ]]; then
-    mkdir -p "${FP}/tarballs"
-    if [[ ! -f "${FP}/tarballs/${filename}" ]]; then
-      curl -L "${source}" -o "${FP}/tarballs/${filename}"
-    fi
-  else
+  case "${proto}" in
+    http | https)
+      mkdir -p "${FP}/tarballs"
+      if [[ ! -f "${FP}/tarballs/${filename}" ]]; then
+        curl -L "${source}" -o "${FP}/tarballs/${filename}"
+      fi
+    ;;
+    git)
+      if [[ ! -d "${srcdir}" ]]; then
+        git clone --recursive --depth=1 "${source##${proto}+}" "${srcdir}"
+      else
+        cd "${srcdir}"
+        git fetch
+      fi
+    ;;
+  *)
     echo "Invalid source protocol"
     exit 1
-  fi
+    ;;
+  esac
 }
 
 do_unpack() {
