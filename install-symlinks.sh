@@ -16,6 +16,7 @@ ln -sfn "${HOME}/.dotfiles/home/zshrc" "${HOME}/.zshrc"
 
 ln -sfn "${HOME}/.dotfiles/home/config/bat/config" "${HOME}/.config/bat/config"
 ln -sfn "${HOME}/.dotfiles/home/config/ccache/config" "${HOME}/.config/ccache/config"
+ln -sfn "${HOME}/.dotfiles/home/config/clangd/config.yaml" "${HOME}/.config/clangd/config.yaml"
 ln -sfn "${HOME}/.dotfiles/home/config/emacs/init.el" "${HOME}/.config/emacs/init.el"
 ln -sfn "${HOME}/.dotfiles/home/config/emacs/early-init.el" "${HOME}/.config/emacs/early-init.el"
 ln -sfn "${HOME}/.dotfiles/home/config/emacs/straight/versions/default.el" "${HOME}/.config/emacs/straight/versions/default.el"
