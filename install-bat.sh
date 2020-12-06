@@ -5,7 +5,7 @@ set -o nounset
 set -o pipefail
 
 pkgname=bat
-pkgver=0.16.0
+pkgver=0.17.1
 
 do_install() {
   cargo install --root="${pkgdir}" --version="${pkgver}" --force "${pkgname}"
