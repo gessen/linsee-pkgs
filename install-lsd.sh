@@ -6,9 +6,29 @@ set -o pipefail
 
 pkgname=lsd
 pkgver=0.16.0
+source="https://github.com/Peltoche/${pkgname}/archive/${pkgver}.tar.gz"
+do_builddir=0
+
+do_configure() {
+  :
+}
+
+do_compile() {
+  cd "${srcdir}"
+  cargo build --release --locked
+}
 
 do_install() {
-  cargo install --root="${pkgdir}" --version="${pkgver}" --force "${pkgname}"
+  cd "${srcdir}"
+  install -dm 755 "${pkgdir}/bin"
+  install -dm 755 "${pkgdir}/share/bash-completion/completions"
+  install -dm 755 "${pkgdir}/share/zsh/site-functions"
+
+  install -Dm 755 "target/release/${pkgname}" -t "${pkgdir}/bin"
+  find "target/release" -name lsd.bash -type f \
+    -exec install -Dm 644 {} "${pkgdir}/share/bash-completion/completions/lsd" \;
+  find "target/release" -name _lsd -type f \
+    -exec install -Dm 644 {} -t "${pkgdir}/share/zsh/site-functions" \;
 }
 
 if [ -n "${BASH_SOURCE}" ]; then
@@ -22,5 +42,5 @@ else
   return 1
 fi
 
-source "${this_dir}/linsee-cargo.sh"
+source "${this_dir}/linsee-makepkg.sh"
 do_everything
