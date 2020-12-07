@@ -20,7 +20,12 @@ do_compile() {
 do_install() {
   cd "${srcdir}"
   install -dm 755 "${pkgdir}/bin"
+  install -dm 755 "${pkgdir}/share/bash-completion/completions"
+  install -dm 755 "${pkgdir}/share/zsh/site-functions"
+
   install -Dm 755 "target/release/${pkgname}" -t "${pkgdir}/bin"
+  install -Dm 644 "etc/completion/completion.bash" "${pkgdir}/share/bash-completion/completions/delta"
+  install -Dm 644 "etc/completion/completion.zsh" "${pkgdir}/share/zsh/site-functions/_delta"
 }
 
 if [ -n "${BASH_SOURCE}" ]; then
