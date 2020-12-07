@@ -4,7 +4,7 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-pkgname=ccls-git
+pkgname=ccls
 source="git+https://github.com/MaskRay/ccls.git"
 do_strip=0
 
