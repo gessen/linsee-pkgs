@@ -87,7 +87,7 @@ package "zsh-themes" {
 
 [rustup] ..> [bat]
 [rustup] ..> [delta]
-[rustup] ..> [fd-find]
+[rustup] ..> [fd]
 [rustup] ..> [lsd]
 [rustup] ..> [ripgrep]
 [rustup] ..> [sad]

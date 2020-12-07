@@ -4,9 +4,9 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-pkgname=fd-find
+pkgname=fd
 pkgver=8.2.0
-source="https://github.com/sharkdp/fd/archive/v${pkgver}.tar.gz"
+source="https://github.com/sharkdp/${pkgname}/archive/v${pkgver}.tar.gz"
 do_builddir=0
 
 do_configure() {
@@ -25,7 +25,7 @@ do_install() {
   install -dm 755 "${pkgdir}/share/zsh/site-functions"
   install -dm 755 "${pkgdir}/share/man/man1"
 
-  install -Dm 755 "target/release/fd" -t "${pkgdir}/bin"
+  install -Dm 755 "target/release/${pkgname}" -t "${pkgdir}/bin"
   find "target/release" -name fd.bash -type f \
     -exec install -Dm 644 {} "${pkgdir}/share/bash-completion/completions/fd" \;
   install -Dm 644 "contrib/completion/_fd" -t "${pkgdir}/share/zsh/site-functions"
