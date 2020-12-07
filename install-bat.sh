@@ -6,9 +6,30 @@ set -o pipefail
 
 pkgname=bat
 pkgver=0.17.1
+source="https://github.com/sharkdp/${pkgname}/archive/v${pkgver}.tar.gz"
+do_builddir=0
+
+do_configure() {
+  :
+}
+
+do_compile() {
+  cd "${srcdir}"
+  cargo build --release --locked
+}
 
 do_install() {
-  cargo install --root="${pkgdir}" --version="${pkgver}" --force "${pkgname}"
+  cd "${srcdir}"
+  install -dm 755 "${pkgdir}/bin"
+  install -dm 755 "${pkgdir}/share/bash-completion/completions"
+  install -dm 755 "${pkgdir}/share/zsh/site-functions"
+  install -dm 755 "${pkgdir}/share/man/man1"
+
+  install -Dm 755 "target/release/${pkgname}" -t "${pkgdir}/bin"
+  find "target/release" -name bat.1 -type f \
+    -exec install -Dm 644 {} -t "${pkgdir}/share/man/man1" \;
+  find "target/release" -name bat.zsh -type f \
+    -exec install -Dm 644 {} "${pkgdir}/share/zsh/site-functions/_bat" \;
 }
 
 if [ -n "${BASH_SOURCE}" ]; then
@@ -22,5 +43,5 @@ else
   return 1
 fi
 
-source "${this_dir}/linsee-cargo.sh"
+source "${this_dir}/linsee-makepkg.sh"
 do_everything
