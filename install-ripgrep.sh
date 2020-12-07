@@ -6,9 +6,29 @@ set -o pipefail
 
 pkgname=ripgrep
 pkgver=12.1.1
+source="https://github.com/BurntSushi/${pkgname}/archive/${pkgver}.tar.gz"
+do_builddir=0
+
+do_configure() {
+  :
+}
+
+do_compile() {
+  cd "${srcdir}"
+  cargo build --release --locked  --features 'pcre2'
+}
 
 do_install() {
-  cargo install --root="${pkgdir}" --version="${pkgver}" --force "${pkgname}"
+  cd "${srcdir}"
+  install -dm 755 "${pkgdir}/bin"
+  install -dm 755 "${pkgdir}/share/bash-completion/completions"
+  install -dm 755 "${pkgdir}/share/zsh/site-functions"
+  install -dm 755 "${pkgdir}/share/man/man1"
+
+  install -Dm 755 "target/release/rg" -t "${pkgdir}/bin"
+  find "target/release" -name rg.bash -type f \
+    -exec install -Dm 644 {} "${pkgdir}/share/bash-completion/completions/rg" \;
+  install -Dm 644 "complete/_rg" -t "${pkgdir}/share/zsh/site-functions"
 }
 
 if [ -n "${BASH_SOURCE}" ]; then
@@ -22,5 +42,5 @@ else
   return 1
 fi
 
-source "${this_dir}/linsee-cargo.sh"
+source "${this_dir}/linsee-makepkg.sh"
 do_everything
