@@ -31,6 +31,7 @@ ln -sfn "${HOME}/.dotfiles/home/config/emacs/early-init.el" "${HOME}/.config/ema
 ln -sfn "${HOME}/.dotfiles/home/config/emacs/straight/versions/default.el" "${HOME}/.config/emacs/straight/versions/default.el"
 ln -sfn "${HOME}/.dotfiles/home/config/git/attributes" "${HOME}/.config/git/attributes"
 ln -sfn "${HOME}/.dotfiles/home/config/git/config" "${HOME}/.config/git/config"
+ln -sfn "${HOME}/.dotfiles/home/config/git/config.local" "${HOME}/.config/git/config.local"
 ln -sfn "${HOME}/.dotfiles/home/config/git/ignore" "${HOME}/.config/git/ignore"
 ln -sfn "${HOME}/.dotfiles/home/config/htop/htoprc" "${HOME}/.config/htop/htoprc"
 ln -sfn "${HOME}/.dotfiles/home/config/ranger/commands.py" "${HOME}/.config/ranger/commands.py"
