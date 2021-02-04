@@ -22,6 +22,7 @@ mkdir -p "${HOME}/.config/htop"
 mkdir -p "${HOME}/.config/ripgrep"
 mkdir -p "${HOME}/.config/tig"
 mkdir -p "${HOME}/.config/tmux"
+mkdir -p "${HOME}/.ssh"
 
 ln -sfn "${HOME}/.dotfiles/home/config/bat/config" "${HOME}/.config/bat/config"
 ln -sfn "${HOME}/.dotfiles/home/config/ccache/config" "${HOME}/.config/ccache/config"
@@ -42,6 +43,13 @@ ln -sfn "${HOME}/.dotfiles/home/config/tmux/tmux.conf" "${HOME}/.config/tmux/tmu
 ln -sfn "${HOME}/.dotfiles/home/config/profile" "${HOME}/.config/profile"
 
 ln -sfn "${HOME}/.config/git/config" "${HOME}/.gitconfig"
+
+ln -sfn "${HOME}/.dotfiles/home/ssh/asmr-config" "${HOME}/.ssh/asmr-config"
+ln -sfn "${HOME}/.dotfiles/home/ssh/config" "${HOME}/.ssh/config"
+ln -sfn "${HOME}/.dotfiles/home/ssh/gerrit-config" "${HOME}/.ssh/gerrit-config"
+ln -sfn "${HOME}/.dotfiles/home/ssh/github-config" "${HOME}/.ssh/github-config"
+ln -sfn "${HOME}/.dotfiles/home/ssh/krling-config" "${HOME}/.ssh/krling-config"
+ln -sfn "${HOME}/.dotfiles/home/ssh/mars-config" "${HOME}/.ssh/mars-config"
 
 ln -sfn "${FP}/.local/share/bash" "${HOME}/.local/share/bash"
 ln -sfn "${FP}/.local/share/cargo" "${HOME}/.local/share/cargo"
