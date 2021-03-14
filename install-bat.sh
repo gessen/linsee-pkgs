@@ -5,7 +5,7 @@ set -o nounset
 set -o pipefail
 
 pkgname=bat
-pkgver=0.17.1
+pkgver=0.18.0
 source="https://github.com/sharkdp/${pkgname}/archive/v${pkgver}.tar.gz"
 do_builddir=0
 
@@ -21,7 +21,6 @@ do_compile() {
 do_install() {
   cd "${srcdir}"
   install -dm 755 "${pkgdir}/bin"
-  install -dm 755 "${pkgdir}/share/bash-completion/completions"
   install -dm 755 "${pkgdir}/share/zsh/site-functions"
   install -dm 755 "${pkgdir}/share/man/man1"
 
