@@ -8,10 +8,10 @@ package "preparations" {
 package "zsh-plugins" {
   [zsh-autopair]
   [zsh-autosuggestions]
+  [zsh-fast-syntax-highlighting]
   [zsh-fzf-git]
   [zsh-fzf-kill]
   [zsh-interactive-cd]
-  [zsh-syntax-highlighting]
 }
 
 package "zsh-themes" {

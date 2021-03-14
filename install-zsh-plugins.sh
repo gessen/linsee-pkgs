@@ -17,7 +17,7 @@ fi
 
 "${this_dir}/install-zsh-autopair.sh"
 "${this_dir}/install-zsh-autosuggestions.sh"
+"${this_dir}/install-zsh-fast-syntax-highlighting.sh"
 "${this_dir}/install-zsh-fzf-git.sh"
 "${this_dir}/install-zsh-fzf-kill.sh"
 "${this_dir}/install-zsh-interactive-cd.sh"
-"${this_dir}/install-zsh-syntax-highlighting.sh"
