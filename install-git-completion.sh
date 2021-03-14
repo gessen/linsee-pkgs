@@ -4,24 +4,26 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-pkgname=git
-pkgver=2.30.0
-source="https://www.kernel.org/pub/software/scm/${pkgname}/${pkgname}-${pkgver}.tar.xz"
+pkgname=git-completion
+pkgver=1.3
+source="https://github.com/felipec/${pkgname}/archive/v${pkgver}.tar.gz"
 do_builddir=0
 
 do_configure() {
-  cd "${srcdir}"
-  ./configure --prefix="${pkgdir}"
+  :
 }
 
 do_compile() {
-  cd "${srcdir}"
-  make -j$(nproc)
+  :
 }
 
 do_install() {
   cd "${srcdir}"
-  make install gitexecdir="${pkgdir}/lib/git-core" INSTALL_SYMLINKS=1
+  make install \
+    DESTDIR="${pkgdir}/" \
+    zshfuncdir="share/zsh/site-functions" \
+    completionsdir="share/bash-completion/completions" \
+    sharedir="share/git-completion"
 }
 
 if [ -n "${BASH_SOURCE}" ]; then

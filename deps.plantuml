@@ -19,6 +19,7 @@ package "zsh-themes" {
 }
 
 [stow] ..> [bash-completion]
+[stow] ..> [git-completion]
 [stow] ..> [diff-so-fancy]
 [stow] ..> [fasd]
 [stow] ..> [fzf]
