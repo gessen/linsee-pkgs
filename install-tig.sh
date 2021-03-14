@@ -5,12 +5,13 @@ set -o nounset
 set -o pipefail
 
 pkgname=tig
-pkgver=2.5.0
+pkgver=2.5.3
 source="https://github.com/jonas/${pkgname}/releases/download/${pkgname}-${pkgver}/${pkgname}-${pkgver}.tar.gz"
 do_builddir=0
 
 do_configure() {
   cd "${srcdir}"
+  patch -p0 < "${this_dir}/${pkgname}/completion.patch"
   ./configure --prefix="${pkgdir}"
 }
 
@@ -23,6 +24,7 @@ do_install() {
   cd "${srcdir}"
   make install
   install -Dm 644 contrib/tig-completion.bash "${pkgdir}/share/bash-completion/completions/${pkgname}"
+  install -Dm 644 contrib/tig-completion.zsh "${pkgdir}/share/zsh/site-functions/_${pkgname}"
 }
 
 if [ -n "${BASH_SOURCE}" ]; then
