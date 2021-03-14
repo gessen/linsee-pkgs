@@ -11,7 +11,7 @@ do_strip=0
 
 do_configure() {
   cd "${srcdir}"
-  patch -p1 < "${this_dir}/clang.patch"
+  patch -p1 < "${this_dir}/${pkgname}/clang.patch"
   cd "${builddir}"
   cmake "${srcdir}/llvm" -DCMAKE_INSTALL_PREFIX="${pkgdir}" \
     -DCMAKE_BUILD_TYPE=Release \
