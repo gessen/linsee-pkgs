@@ -5,7 +5,7 @@ set -o nounset
 set -o pipefail
 
 pkgname=lsd
-pkgver=0.16.0
+pkgver=0.20.1
 source="https://github.com/Peltoche/${pkgname}/archive/${pkgver}.tar.gz"
 do_builddir=0
 
