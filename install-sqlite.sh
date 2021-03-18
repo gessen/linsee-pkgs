@@ -9,7 +9,6 @@ pkgver=3330000
 source="https://www.sqlite.org/2020/${pkgname}-src-${pkgver}.zip"
 
 do_configure() {
-  export CPPFLAGS="-isystem ${FP}/.local/include/readline"
   export LDFLAGS="-L${FP}/.local/lib"
   cd "${builddir}"
   "${srcdir}/configure" --prefix="${pkgdir}"
@@ -22,7 +21,7 @@ do_compile() {
 
 do_install() {
   cd "${builddir}"
-  make install
+  make install DESTDIR="${pkgdir}/"
 }
 
 if [ -n "${BASH_SOURCE}" ]; then
