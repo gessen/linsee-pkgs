@@ -9,7 +9,9 @@ branch=linsee
 source="git@gitlabe2.ext.net.nokia.com:jswierk/${pkgname}.git"
 
 do_install() {
-  git clone "${source}" --branch="${branch}" "${FP}/.dotfiles"
+  if [[ ! -d "${FP}/.dotfiles" ]]; then
+    git clone "${source}" --branch="${branch}" "${FP}/.dotfiles"
+  fi
 }
 
 do_install
