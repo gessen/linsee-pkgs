@@ -5,7 +5,7 @@ set -o nounset
 set -o pipefail
 
 pkgname=tmux
-pkgver=3.1_b
+pkgver=3.2
 source="https://github.com/tmux/${pkgname}/releases/download/${pkgver/_/}/${pkgname}-${pkgver/_/}.tar.gz"
 
 do_configure() {
