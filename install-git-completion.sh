@@ -5,7 +5,7 @@ set -o nounset
 set -o pipefail
 
 pkgname=git-completion
-pkgver=1.3
+pkgver=1.3.1
 source="https://github.com/felipec/${pkgname}/archive/v${pkgver}.tar.gz"
 do_builddir=0
 
