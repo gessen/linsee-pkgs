@@ -36,6 +36,7 @@ fi
 "${this_dir}/install-aspell-en.sh"
 "${this_dir}/install-binutils.sh"
 "${this_dir}/install-libevent.sh"
+"${this_dir}/install-grpc.sh"
 "${this_dir}/install-ncurses.sh"
 "${this_dir}/install-bison.sh"
 "${this_dir}/install-curl.sh"
@@ -45,7 +46,6 @@ fi
 "${this_dir}/install-sqlite.sh"
 "${this_dir}/install-tar.sh"
 
-"${this_dir}/install-llvm-project.sh"
 "${this_dir}/install-tmux.sh"
 "${this_dir}/install-htop.sh"
 "${this_dir}/install-less.sh"
@@ -55,7 +55,6 @@ fi
 "${this_dir}/install-nettle.sh"
 "${this_dir}/install-pythons.sh"
 "${this_dir}/install-libtool.sh"
-"${this_dir}/install-ccls.sh"
 "${this_dir}/install-git-lfs.sh"
 "${this_dir}/install-gnutls.sh"
 "${this_dir}/install-bear.sh"
@@ -63,6 +62,8 @@ fi
 "${this_dir}/install-ranger.sh"
 "${this_dir}/install-repo.sh"
 
+"${this_dir}/install-llvm-project.sh"
+"${this_dir}/install-ccls.sh"
 "${this_dir}/install-emacs.sh"
 "${this_dir}/install-rustup.sh"
 "${this_dir}/install-bat.sh"

@@ -1,0 +1,24 @@
+diff --git i/clang-tools-extra/clangd/index/remote/server/CMakeLists.txt w/clang-tools-extra/clangd/index/remote/server/CMakeLists.txt
+index e6959db6b..0766eb297 100644
+--- i/clang-tools-extra/clangd/index/remote/server/CMakeLists.txt
++++ w/clang-tools-extra/clangd/index/remote/server/CMakeLists.txt
+@@ -18,3 +18,7 @@ target_link_libraries(clangd-index-server
+   RemoteIndexServiceProto
+   clangdRemoteMarshalling
+   )
++
++install(TARGETS clangd-index-server
++  RUNTIME DESTINATION bin
++)
+diff --git i/clang-tools-extra/clangd/indexer/CMakeLists.txt w/clang-tools-extra/clangd/indexer/CMakeLists.txt
+index ff110693c..020ede7ab 100644
+--- i/clang-tools-extra/clangd/indexer/CMakeLists.txt
++++ w/clang-tools-extra/clangd/indexer/CMakeLists.txt
+@@ -22,3 +22,7 @@ target_link_libraries(clangd-indexer
+   clangDaemon
+   clangdSupport
+ )
++
++install(TARGETS clangd-indexer
++  RUNTIME DESTINATION bin
++)

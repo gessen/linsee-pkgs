@@ -27,7 +27,8 @@ do_download() {
     ;;
     git)
       if [[ ! -d "${srcdir}" ]]; then
-        git clone --recursive --depth=1 "${source##${proto}+}" "${srcdir}"
+        local branch=${pkgver:+"--branch ${pkgver}"}
+        git clone --recursive --depth=1 ${branch} "${source##${proto}+}" "${srcdir}"
       else
         cd "${srcdir}"
         git fetch

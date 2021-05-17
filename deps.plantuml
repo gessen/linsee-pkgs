@@ -36,6 +36,7 @@ package "zsh-themes" {
 [gcc] ..> [curl]
 [gcc] ..> [emacs]
 [gcc] ..> [gmp]
+[gcc] ..> [grpc]
 [gcc] ..> [jansson]
 [gcc] ..> [libevent]
 [gcc] ..> [libtasn1]
@@ -46,6 +47,7 @@ package "zsh-themes" {
 [gcc] ..> [tar]
 
 [cmake] ..> [ccls]
+[cmake] ..> [grpc]
 [cmake] ..> [llvm-project]
 [cmake] ..> [libevent]
 
@@ -69,6 +71,10 @@ package "zsh-themes" {
 [aspell] ..> [aspell-en]
 
 [binutils] ..> [llvm-project]
+
+[grpc] ..> [llvm-project]
+
+[pythons] ..> [llvm-project]
 
 [tar] ..> [libtool]
 
