@@ -5,7 +5,7 @@ set -o nounset
 set -o pipefail
 
 pkgname=git
-pkgver=2.30.0
+pkgver=2.31.1
 source="https://www.kernel.org/pub/software/scm/${pkgname}/${pkgname}-${pkgver}.tar.xz"
 do_builddir=0
 
