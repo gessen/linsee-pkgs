@@ -5,7 +5,7 @@ set -o nounset
 set -o pipefail
 
 pkgname=gcc
-pkgver=10.2.0
+pkgver=10.3.0
 source="https://ftp.gnu.org/gnu/${pkgname}/${pkgname}-${pkgver}/${pkgname}-${pkgver}.tar.xz"
 do_strip=0
 
