@@ -63,10 +63,12 @@ ln -sfn "${HOME}/.dotfiles/home/ssh/rf7-config" "${HOME}/.ssh/rf7-config"
 
 mkdir -p "${FP}/.local/share/bash"
 mkdir -p "${FP}/.local/share/ranger"
+mkdir -p "${FP}/.local/share/tig"
 
 ln -sfn "${FP}/.local/share/bash" "${HOME}/.local/share/bash"
 ln -sfn "${FP}/.local/share/cargo" "${HOME}/.local/share/cargo"
 ln -sfn "${FP}/.local/share/pyenv" "${HOME}/.local/share/pyenv"
 ln -sfn "${FP}/.local/share/ranger" "${HOME}/.local/share/ranger"
 ln -sfn "${FP}/.local/share/rustup" "${HOME}/.local/share/rustup"
+ln -sfn "${FP}/.local/share/tig" "${HOME}/.local/share/tig"
 ln -sfn "${FP}/.local/share/zsh" "${HOME}/.local/share/zsh"
