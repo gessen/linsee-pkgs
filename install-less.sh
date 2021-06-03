@@ -5,7 +5,7 @@ set -o nounset
 set -o pipefail
 
 pkgname=less
-pkgver=563
+pkgver=581.2
 source="http://www.greenwoodsoftware.com/${pkgname}/${pkgname}-${pkgver}.tar.gz"
 
 do_configure() {
