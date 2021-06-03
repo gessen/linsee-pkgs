@@ -5,8 +5,8 @@ set -o nounset
 set -o pipefail
 
 pkgname=cmake
-pkgver=3.18.4
-source="https://cmake.org/files/v${pkgver%.*}/${pkgname}-${pkgver}-Linux-x86_64.tar.gz"
+pkgver=3.20.3
+source="https://cmake.org/files/v${pkgver%.*}/${pkgname}-${pkgver}-linux-x86_64.tar.gz"
 do_builddir=0
 do_strip=0
 
