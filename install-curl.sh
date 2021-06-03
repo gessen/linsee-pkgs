@@ -5,7 +5,7 @@ set -o nounset
 set -o pipefail
 
 pkgname=curl
-pkgver=7.73.0
+pkgver=7.77.0
 source="https://curl.haxx.se/download/${pkgname}-${pkgver}.tar.gz"
 
 do_configure() {
@@ -14,7 +14,8 @@ do_configure() {
     --mandir="${pkgdir}/share/man" \
     --disable-ldap \
     --disable-ldaps \
-    --disable-manual
+    --disable-manual \
+    --with-openssl
 }
 
 do_compile() {
