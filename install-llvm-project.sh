@@ -14,6 +14,7 @@ do_configure() {
   patch -p1 < "${this_dir}/${pkgname}/clang.patch"
   patch -p1 < "${this_dir}/${pkgname}/clangd.patch"
   cd "${builddir}"
+  eval "$(pyenv init --path)"
   eval "$(pyenv init -)"
   cmake "${srcdir}/llvm" -DCMAKE_INSTALL_PREFIX="${pkgdir}" \
     -DCMAKE_BUILD_TYPE=Release \

@@ -7,6 +7,7 @@ set -o pipefail
 pkgname=git-review
 
 do_install() {
+  eval "$(pyenv init --path)"
   eval "$(pyenv init -)"
   pip install "${pkgname}"
 }

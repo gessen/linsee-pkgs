@@ -5,7 +5,7 @@ set -o nounset
 set -o pipefail
 
 pkgname=pyenv
-pkgver=1.2.21
+pkgver=2.0.0
 source="https://github.com/${pkgname}/${pkgname}/archive/v${pkgver}.tar.gz"
 filename="${pkgname}-${pkgver}.tar.gz"
 do_builddir=0
