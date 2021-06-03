@@ -5,7 +5,7 @@ set -o nounset
 set -o pipefail
 
 pkgname=gnutls
-pkgver=3.6.15
+pkgver=3.7.2
 source="https://www.gnupg.org/ftp/gcrypt/${pkgname}/v${pkgver%.*}/${pkgname}-${pkgver}.tar.xz"
 
 do_configure() {
