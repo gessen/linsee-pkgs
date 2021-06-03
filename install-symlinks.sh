@@ -59,7 +59,7 @@ ln -sfn "${HOME}/.dotfiles/home/ssh/config" "${HOME}/.ssh/config"
 ln -sfn "${HOME}/.dotfiles/home/ssh/gerrit-config" "${HOME}/.ssh/gerrit-config"
 ln -sfn "${HOME}/.dotfiles/home/ssh/github-config" "${HOME}/.ssh/github-config"
 ln -sfn "${HOME}/.dotfiles/home/ssh/krling-config" "${HOME}/.ssh/krling-config"
-ln -sfn "${HOME}/.dotfiles/home/ssh/mars-config" "${HOME}/.ssh/mars-config"
+ln -sfn "${HOME}/.dotfiles/home/ssh/rf7-config" "${HOME}/.ssh/rf7-config"
 
 mkdir -p "${FP}/.local/share/bash"
 mkdir -p "${FP}/.local/share/ranger"
