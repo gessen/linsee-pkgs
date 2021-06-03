@@ -5,7 +5,7 @@ set -o nounset
 set -o pipefail
 
 pkgname=aspell-en
-pkgver=2019.10.06
+pkgver=2020.12.07
 source="https://ftp.gnu.org/gnu/aspell/dict/en/aspell6-en-${pkgver}-0.tar.bz2"
 do_builddir=0
 
