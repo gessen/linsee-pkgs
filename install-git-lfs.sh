@@ -5,7 +5,7 @@ set -o nounset
 set -o pipefail
 
 pkgname=git-lfs
-pkgver=2.12.0
+pkgver=2.13.3
 source="https://github.com/${pkgname}/${pkgname}/releases/download/v${pkgver}/${pkgname}-linux-amd64-v${pkgver}.tar.gz"
 strip_components=0
 do_builddir=0
