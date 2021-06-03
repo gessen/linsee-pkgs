@@ -5,7 +5,7 @@ set -o nounset
 set -o pipefail
 
 pkgname=fzf
-pkgver=0.23.1
+pkgver=0.27.2
 source="https://github.com/junegunn/${pkgname}/archive/${pkgver}.tar.gz"
 filename="${pkgname}-${pkgver}.tar.gz"
 do_builddir=0
