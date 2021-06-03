@@ -11,7 +11,9 @@ ln -sfn "${FP}/.cache/clangd" "${HOME}/.clangd"
 ln -sfn "${FP}/.config/emacs" "${HOME}/.config/emacs"
 ln -sfn "${FP}/.config/oh-my-zsh" "${HOME}/.config/oh-my-zsh"
 
+ln -sfn "${HOME}/.dotfiles/home/bash_profile" "${HOME}/.bash_profile"
 ln -sfn "${HOME}/.dotfiles/home/bashrc" "${HOME}/.bashrc"
+ln -sfn "${HOME}/.dotfiles/home/zprofile" "${HOME}/.zprofile"
 ln -sfn "${HOME}/.dotfiles/home/zshrc" "${HOME}/.zshrc"
 
 mkdir -p "${FP}/.cache/ccache"
@@ -47,7 +49,8 @@ ln -sfn "${HOME}/.dotfiles/home/config/ranger/rc.conf" "${HOME}/.config/ranger/r
 ln -sfn "${HOME}/.dotfiles/home/config/ripgrep/config" "${HOME}/.config/ripgrep/config"
 ln -sfn "${HOME}/.dotfiles/home/config/tig/config" "${HOME}/.config/tig/config"
 ln -sfn "${HOME}/.dotfiles/home/config/tmux/tmux.conf" "${HOME}/.config/tmux/tmux.conf"
-ln -sfn "${HOME}/.dotfiles/home/config/profile" "${HOME}/.config/profile"
+ln -sfn "${HOME}/.dotfiles/home/config/shprofile" "${HOME}/.config/shprofile"
+ln -sfn "${HOME}/.dotfiles/home/config/shrc" "${HOME}/.config/shrc"
 
 ln -sfn "${HOME}/.config/git/config" "${HOME}/.gitconfig"
 
