@@ -5,7 +5,7 @@ set -o nounset
 set -o pipefail
 
 pkgname=powerlevel10k
-pkgver=1.13.0
+pkgver=1.14.6
 source="https://github.com/romkatv/${pkgname}"
 
 do_install() {
