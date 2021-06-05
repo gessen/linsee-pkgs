@@ -5,7 +5,7 @@ set -o nounset
 set -o pipefail
 
 pkgname=tig
-pkgver=2.5.3
+pkgver=2.5.4
 source="https://github.com/jonas/${pkgname}/releases/download/${pkgname}-${pkgver}/${pkgname}-${pkgver}.tar.gz"
 do_builddir=0
 
