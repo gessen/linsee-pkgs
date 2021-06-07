@@ -5,13 +5,13 @@ set -o nounset
 set -o pipefail
 
 pkgname=sqlite
-pkgver=3330000
-source="https://www.sqlite.org/2020/${pkgname}-src-${pkgver}.zip"
+pkgver=3350500
+source="https://www.sqlite.org/2021/${pkgname}-src-${pkgver}.zip"
 
 do_configure() {
   export LDFLAGS="-L${FP}/.local/lib"
   cd "${builddir}"
-  "${srcdir}/configure" --prefix="${pkgdir}"
+  "${srcdir}/configure" --prefix="${pkgdir}" TCLLIBDIR="${pkgdir}/share/sqlite3"
 }
 
 do_compile() {
@@ -21,7 +21,7 @@ do_compile() {
 
 do_install() {
   cd "${builddir}"
-  make install DESTDIR="${pkgdir}/"
+  make install
 }
 
 if [ -n "${BASH_SOURCE}" ]; then
