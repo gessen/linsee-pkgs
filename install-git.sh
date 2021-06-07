@@ -11,6 +11,7 @@ do_builddir=0
 
 do_configure() {
   cd "${srcdir}"
+  export LDFLAGS="$(pkg-config --libs-only-L libcurl)"
   ./configure --prefix="${pkgdir}"
 }
 
