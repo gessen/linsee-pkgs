@@ -52,13 +52,6 @@ fi
 "${this_dir}/install-git.sh"
 "${this_dir}/install-git-lfs.sh"
 
-"${this_dir}/install-gmp.sh"
-"${this_dir}/install-libtasn1.sh"
-"${this_dir}/install-jansson.sh"
-"${this_dir}/install-nettle.sh"
-"${this_dir}/install-gnutls.sh"
-"${this_dir}/install-emacs.sh"
-
 "${this_dir}/install-pyenv.sh"
 "${this_dir}/install-sqlite.sh"
 "${this_dir}/install-pythons.sh"
@@ -66,6 +59,14 @@ fi
 "${this_dir}/install-git-review.sh"
 "${this_dir}/install-ranger.sh"
 "${this_dir}/install-repo.sh"
+
+"${this_dir}/install-gmp.sh"
+"${this_dir}/install-libtasn1.sh"
+"${this_dir}/install-libxml2.sh"
+"${this_dir}/install-jansson.sh"
+"${this_dir}/install-nettle.sh"
+"${this_dir}/install-gnutls.sh"
+"${this_dir}/install-emacs.sh"
 
 "${this_dir}/install-grpc.sh"
 "${this_dir}/install-binutils.sh"

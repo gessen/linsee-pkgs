@@ -54,6 +54,7 @@ package "zsh-themes" {
 
 [pythons] ..> [bear]
 [pythons] ..> [git-review]
+[pythons] ..> [libxml2]
 [pythons] ..> [ranger]
 [pythons] ..> [repo]
 
@@ -65,6 +66,7 @@ package "zsh-themes" {
 
 [gnutls] ..> [emacs]
 [jansson] ..> [emacs]
+[libxml2] ..> [emacs]
 
 [aspell] ..> [aspell-en]
 
