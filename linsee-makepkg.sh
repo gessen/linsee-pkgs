@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-srcdir="${FP}/src/${pkgname}"
-builddir="${FP}/build/${pkgname}"
+srcdir="${FP}/tmp/src/${pkgname}"
+builddir="${FP}/tmp/build/${pkgname}"
+tarballdir="${FP}/tmp/tarballs"
 stowdir="${FP}/.local/stow"
 pkgdir="${FP}/.local/stow/${pkgname}"
 proto="${source%%://*}"
@@ -20,9 +21,9 @@ do_stow=${do_stow:-1}
 do_download() {
   case "${proto}" in
     http | https)
-      mkdir -p "${FP}/tarballs"
-      if [[ ! -f "${FP}/tarballs/${filename}" ]]; then
-        curl -L "${source}" -o "${FP}/tarballs/${filename}"
+      mkdir -p "${tarballdir}"
+      if [[ ! -f "${tarballdir}/${filename}" ]]; then
+        curl -L "${source}" -o "${tarballdir}/${filename}"
       fi
     ;;
     git)
@@ -53,11 +54,11 @@ do_unpack() {
 
   if [[ "${extension}" == "zip" ]]; then
     temp=$(mktemp -d)
-    unzip "${FP}/tarballs/${filename}" -d "${temp}"
+    unzip "${tarballdir}/${filename}" -d "${temp}"
     mv "${temp}"/*/* "${srcdir}"
     rm -rf "${temp}"
   else
-    tar xf "${FP}/tarballs/${filename}" --strip-components=${strip_components} -C "${srcdir}"
+    tar xf "${tarballdir}/${filename}" --strip-components=${strip_components} -C "${srcdir}"
   fi
 }
 
